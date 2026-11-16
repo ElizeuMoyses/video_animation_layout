@@ -1,0 +1,2415 @@
+{
+  "schema": 1,
+  "title": "Interfaces em cena",
+  "canvas": {
+    "width": 720,
+    "height": 1280,
+    "fps": 30
+  },
+  "brands": [
+    {
+      "id": "instagram",
+      "name": "Instagram",
+      "color": "#e1306c",
+      "description": "Comentários, feed, Reels e conversas em uma variante móvel do Instagram."
+    },
+    {
+      "id": "tiktok",
+      "name": "TikTok",
+      "color": "#fe2c55",
+      "description": "Comentários, vídeos e conversas com o ritmo visual do TikTok."
+    },
+    {
+      "id": "claude",
+      "name": "Claude",
+      "color": "#c96442",
+      "description": "Conversa, contexto e criação com a aparência quente do Claude."
+    },
+    {
+      "id": "chatgpt",
+      "name": "ChatGPT",
+      "color": "#10a37f",
+      "description": "Conversa, criação e ferramentas em uma variante web do ChatGPT."
+    },
+    {
+      "id": "whatsapp",
+      "name": "WhatsApp",
+      "color": "#25d366",
+      "description": "Conversas, áudios, grupos e mensagens automáticas com a cara do WhatsApp."
+    }
+  ],
+  "components": [
+    {
+      "id": "instagram-comment",
+      "app": "instagram",
+      "name": "Comentário isolado",
+      "category": "Comentários",
+      "description": "Recorte de comentário com nome, tempo, resposta e curtida animada.",
+      "width": 520,
+      "height": 202,
+      "duration": 7,
+      "tags": [
+        "comentário",
+        "curtir",
+        "recorte"
+      ],
+      "defaults": {
+        "username": "mariana.cria",
+        "primary": "Eu fazia isso na mão todos os dias. Como automatiza? 👀",
+        "likes": "128",
+        "age": "2 h"
+      },
+      "fields": [
+        {
+          "key": "username",
+          "label": "Nome de usuário",
+          "type": "text"
+        },
+        {
+          "key": "primary",
+          "label": "Texto principal",
+          "type": "textarea"
+        },
+        {
+          "key": "likes",
+          "label": "Curtidas iniciais",
+          "type": "text"
+        },
+        {
+          "key": "age",
+          "label": "Tempo do comentário",
+          "type": "text"
+        }
+      ]
+    },
+    {
+      "id": "instagram-replies",
+      "app": "instagram",
+      "name": "Conversa de respostas",
+      "category": "Comentários",
+      "description": "Comentário principal e duas respostas, com expansão progressiva da conversa.",
+      "width": 520,
+      "height": 410,
+      "duration": 8,
+      "tags": [
+        "respostas",
+        "conversa",
+        "comentários"
+      ],
+      "defaults": {
+        "username": "mariana.cria",
+        "primary": "Dá para começar sem saber programar?",
+        "replyUser": "elizeumoyses",
+        "secondary": "Dá sim! Comece por uma tarefa pequena e repetitiva.",
+        "thirdUser": "mariana.cria",
+        "tertiary": "Era o incentivo que eu precisava 🙌"
+      },
+      "fields": [
+        {
+          "key": "username",
+          "label": "Nome de usuário",
+          "type": "text"
+        },
+        {
+          "key": "primary",
+          "label": "Texto principal",
+          "type": "textarea"
+        },
+        {
+          "key": "replyUser",
+          "label": "Usuário que responde",
+          "type": "text"
+        },
+        {
+          "key": "secondary",
+          "label": "Primeira resposta",
+          "type": "textarea"
+        },
+        {
+          "key": "thirdUser",
+          "label": "Usuário da segunda resposta",
+          "type": "text"
+        },
+        {
+          "key": "tertiary",
+          "label": "Segunda resposta",
+          "type": "textarea"
+        }
+      ]
+    },
+    {
+      "id": "instagram-comments-panel",
+      "app": "instagram",
+      "name": "Painel de comentários",
+      "category": "Comentários",
+      "description": "Folha de comentários com alça, lista, reações rápidas e comentário sendo escrito.",
+      "width": 430,
+      "height": 680,
+      "duration": 9,
+      "tags": [
+        "painel",
+        "comentários",
+        "digitar"
+      ],
+      "defaults": {
+        "username": "elizeumoyses",
+        "primary": "Qual tarefa você automatizaria primeiro?",
+        "userA": "ana.design",
+        "commentA": "Organizar as respostas dos clientes. Leva horas!",
+        "userB": "pedro.dev",
+        "commentB": "Aquela planilha de toda segunda-feira 😅",
+        "userC": "bia.negocios",
+        "commentC": "Salvar e classificar os pedidos que chegam.",
+        "secondary": "Vou mostrar um passo a passo no próximo vídeo."
+      },
+      "fields": [
+        {
+          "key": "username",
+          "label": "Nome de usuário",
+          "type": "text"
+        },
+        {
+          "key": "primary",
+          "label": "Texto principal",
+          "type": "textarea"
+        },
+        {
+          "key": "userA",
+          "label": "Usuário 1",
+          "type": "text"
+        },
+        {
+          "key": "commentA",
+          "label": "Comentário 1",
+          "type": "textarea"
+        },
+        {
+          "key": "userB",
+          "label": "Usuário 2",
+          "type": "text"
+        },
+        {
+          "key": "commentB",
+          "label": "Comentário 2",
+          "type": "textarea"
+        },
+        {
+          "key": "userC",
+          "label": "Usuário 3",
+          "type": "text"
+        },
+        {
+          "key": "commentC",
+          "label": "Comentário 3",
+          "type": "textarea"
+        },
+        {
+          "key": "secondary",
+          "label": "Novo comentário",
+          "type": "textarea"
+        }
+      ]
+    },
+    {
+      "id": "instagram-feed-post",
+      "app": "instagram",
+      "name": "Post do feed",
+      "category": "Publicações",
+      "description": "Publicação móvel com retrato, legenda, curtida, repost e navegação recente.",
+      "width": 430,
+      "height": 780,
+      "duration": 8,
+      "tags": [
+        "feed",
+        "post",
+        "curtir",
+        "repost"
+      ],
+      "defaults": {
+        "username": "elizeumoyses",
+        "location": "Florianópolis, Brasil",
+        "primary": "Automatizar é devolver tempo para o que importa.",
+        "mediaTitle": "Menos tarefas.\nMais tempo.",
+        "secondary": "Comece pela tarefa que você repete toda semana.",
+        "likes": "1284",
+        "comments": "Ver todos os 42 comentários",
+        "age": "HÁ 2 HORAS"
+      },
+      "fields": [
+        {
+          "key": "username",
+          "label": "Nome de usuário",
+          "type": "text"
+        },
+        {
+          "key": "location",
+          "label": "Localização",
+          "type": "text"
+        },
+        {
+          "key": "primary",
+          "label": "Texto principal",
+          "type": "textarea"
+        },
+        {
+          "key": "mediaTitle",
+          "label": "Texto sobre a mídia",
+          "type": "textarea"
+        },
+        {
+          "key": "secondary",
+          "label": "Complemento da legenda",
+          "type": "textarea"
+        },
+        {
+          "key": "likes",
+          "label": "Curtidas iniciais",
+          "type": "text"
+        },
+        {
+          "key": "comments",
+          "label": "Rótulo dos comentários",
+          "type": "text"
+        },
+        {
+          "key": "age",
+          "label": "Tempo da publicação",
+          "type": "text"
+        }
+      ]
+    },
+    {
+      "id": "instagram-reels",
+      "app": "instagram",
+      "name": "Overlay de Reels",
+      "category": "Vídeo",
+      "description": "Overlay vertical com Reels e Amigos, ações laterais, autor, áudio e curtida.",
+      "width": 430,
+      "height": 760,
+      "duration": 8,
+      "tags": [
+        "reels",
+        "vídeo",
+        "overlay",
+        "curtir"
+      ],
+      "defaults": {
+        "username": "elizeumoyses",
+        "primary": "A tarefa era repetitiva. A solução pode ser simples.",
+        "commentUser": "mariana.cria",
+        "secondary": "É esse tipo de automação que eu precisava!",
+        "audio": "elizeumoyses · Áudio original",
+        "likes": "2840",
+        "comments": "128",
+        "shares": "356"
+      },
+      "fields": [
+        {
+          "key": "username",
+          "label": "Nome de usuário",
+          "type": "text"
+        },
+        {
+          "key": "primary",
+          "label": "Texto principal",
+          "type": "textarea"
+        },
+        {
+          "key": "commentUser",
+          "label": "Usuário em destaque",
+          "type": "text"
+        },
+        {
+          "key": "secondary",
+          "label": "Comentário em destaque",
+          "type": "textarea"
+        },
+        {
+          "key": "audio",
+          "label": "Áudio",
+          "type": "text"
+        },
+        {
+          "key": "likes",
+          "label": "Curtidas iniciais",
+          "type": "text"
+        },
+        {
+          "key": "comments",
+          "label": "Comentários",
+          "type": "text"
+        },
+        {
+          "key": "shares",
+          "label": "Compartilhamentos",
+          "type": "text"
+        }
+      ]
+    },
+    {
+      "id": "instagram-dm",
+      "app": "instagram",
+      "name": "Mensagem direta",
+      "category": "Mensagens",
+      "description": "Conversa com balões de mensagem, digitação, envio e confirmação de leitura.",
+      "width": 430,
+      "height": 660,
+      "duration": 9,
+      "tags": [
+        "dm",
+        "mensagem",
+        "digitar",
+        "direct"
+      ],
+      "defaults": {
+        "username": "mariana.cria",
+        "displayName": "Mariana",
+        "status": "Ativo(a) agora",
+        "primary": "Oi! Vi seu vídeo e queria automatizar uma tarefa aqui.",
+        "secondary": "Claro! Me conta qual tarefa você repete todo dia.",
+        "tertiary": "Já te mando um exemplo 🙌",
+        "timestamp": "HOJE, 09:41"
+      },
+      "fields": [
+        {
+          "key": "username",
+          "label": "Nome de usuário",
+          "type": "text"
+        },
+        {
+          "key": "displayName",
+          "label": "Nome da conversa",
+          "type": "text"
+        },
+        {
+          "key": "status",
+          "label": "Status do contato",
+          "type": "text"
+        },
+        {
+          "key": "primary",
+          "label": "Texto principal",
+          "type": "textarea"
+        },
+        {
+          "key": "secondary",
+          "label": "Mensagem enviada",
+          "type": "textarea"
+        },
+        {
+          "key": "tertiary",
+          "label": "Resposta do contato",
+          "type": "textarea"
+        },
+        {
+          "key": "timestamp",
+          "label": "Horário da conversa",
+          "type": "text"
+        }
+      ]
+    },
+    {
+      "id": "instagram-story-reply",
+      "app": "instagram",
+      "name": "Story e resposta",
+      "category": "Stories",
+      "description": "Story com barras de progresso, mídia de exemplo e resposta privada animada.",
+      "width": 430,
+      "height": 760,
+      "duration": 8,
+      "tags": [
+        "story",
+        "responder",
+        "mensagem",
+        "stories"
+      ],
+      "defaults": {
+        "username": "elizeumoyses",
+        "age": "23 min",
+        "primary": "Qual tarefa mais toma\no seu tempo hoje?",
+        "secondary": "Conferir a mesma planilha todo dia!",
+        "sticker": "Me conta aqui 👇"
+      },
+      "fields": [
+        {
+          "key": "username",
+          "label": "Nome de usuário",
+          "type": "text"
+        },
+        {
+          "key": "age",
+          "label": "Tempo do Story",
+          "type": "text"
+        },
+        {
+          "key": "primary",
+          "label": "Texto principal",
+          "type": "textarea"
+        },
+        {
+          "key": "sticker",
+          "label": "Texto complementar",
+          "type": "text"
+        },
+        {
+          "key": "secondary",
+          "label": "Resposta privada",
+          "type": "textarea"
+        }
+      ]
+    },
+    {
+      "id": "instagram-profile-follow",
+      "app": "instagram",
+      "name": "Perfil e seguir",
+      "category": "Perfil",
+      "description": "Perfil com biografia, destaques, grade vertical e mudança de Seguir para Seguindo.",
+      "width": 430,
+      "height": 760,
+      "duration": 7,
+      "tags": [
+        "perfil",
+        "seguir",
+        "grade",
+        "biografia"
+      ],
+      "defaults": {
+        "username": "elizeumoyses",
+        "displayName": "Elizeu Flor Moyses",
+        "primary": "Tecnologia que simplifica o seu dia.",
+        "secondary": "Automação, IA e processos na prática.\nUm passo de cada vez.",
+        "link": "automatizasoftware.com.br",
+        "posts": "148",
+        "followers": "2840",
+        "following": "812",
+        "tileA": "COMECE\nAQUI",
+        "tileB": "MENOS\nREPETIÇÃO",
+        "tileC": "MAIS\nTEMPO"
+      },
+      "fields": [
+        {
+          "key": "username",
+          "label": "Nome de usuário",
+          "type": "text"
+        },
+        {
+          "key": "displayName",
+          "label": "Nome do perfil",
+          "type": "text"
+        },
+        {
+          "key": "primary",
+          "label": "Texto principal",
+          "type": "textarea"
+        },
+        {
+          "key": "secondary",
+          "label": "Biografia complementar",
+          "type": "textarea"
+        },
+        {
+          "key": "link",
+          "label": "Link exibido",
+          "type": "text"
+        },
+        {
+          "key": "posts",
+          "label": "Publicações",
+          "type": "text"
+        },
+        {
+          "key": "followers",
+          "label": "Seguidores iniciais",
+          "type": "text"
+        },
+        {
+          "key": "following",
+          "label": "Seguindo",
+          "type": "text"
+        },
+        {
+          "key": "tileA",
+          "label": "Capa 1",
+          "type": "textarea"
+        },
+        {
+          "key": "tileB",
+          "label": "Capa 2",
+          "type": "textarea"
+        },
+        {
+          "key": "tileC",
+          "label": "Capa 3",
+          "type": "textarea"
+        }
+      ]
+    },
+    {
+      "id": "tiktok-comment",
+      "app": "tiktok",
+      "name": "Comentário",
+      "category": "Comentários",
+      "description": "Comentário isolado com avatar, resposta e coração que recebe uma curtida.",
+      "width": 520,
+      "height": 236,
+      "duration": 7,
+      "tags": [
+        "comentário",
+        "curtir",
+        "coração"
+      ],
+      "defaults": {
+        "username": "marina.tech",
+        "primary": "Dá para automatizar isso sem saber programar?",
+        "likes": "128",
+        "likesAfter": "129",
+        "replies": "Ver 6 respostas"
+      },
+      "fields": [
+        {
+          "key": "username",
+          "label": "Usuário",
+          "type": "text"
+        },
+        {
+          "key": "primary",
+          "label": "Comentário",
+          "type": "textarea"
+        },
+        {
+          "key": "likes",
+          "label": "Curtidas iniciais",
+          "type": "text"
+        },
+        {
+          "key": "likesAfter",
+          "label": "Curtidas finais",
+          "type": "text"
+        },
+        {
+          "key": "replies",
+          "label": "Texto das respostas",
+          "type": "text"
+        }
+      ]
+    },
+    {
+      "id": "tiktok-thread",
+      "app": "tiktok",
+      "name": "Conversa de respostas",
+      "category": "Comentários",
+      "description": "Comentário original e respostas encadeadas, incluindo a identificação do criador.",
+      "width": 520,
+      "height": 500,
+      "duration": 8,
+      "tags": [
+        "thread",
+        "respostas",
+        "criador"
+      ],
+      "defaults": {
+        "username": "marina.tech",
+        "primary": "Qual tarefa você automatizaria primeiro?",
+        "creatorName": "Elizeu Moyses",
+        "reply": "A que mais se repete na sua semana. Comece pequeno.",
+        "secondUser": "lucas.dev",
+        "secondReply": "Aqui seriam os relatórios de segunda-feira.",
+        "likes": "84",
+        "likesAfter": "85"
+      },
+      "fields": [
+        {
+          "key": "username",
+          "label": "Autor do comentário",
+          "type": "text"
+        },
+        {
+          "key": "primary",
+          "label": "Comentário original",
+          "type": "textarea"
+        },
+        {
+          "key": "creatorName",
+          "label": "Nome do criador",
+          "type": "text"
+        },
+        {
+          "key": "reply",
+          "label": "Resposta do criador",
+          "type": "textarea"
+        },
+        {
+          "key": "secondUser",
+          "label": "Segundo usuário",
+          "type": "text"
+        },
+        {
+          "key": "secondReply",
+          "label": "Segunda resposta",
+          "type": "textarea"
+        },
+        {
+          "key": "likes",
+          "label": "Curtidas iniciais",
+          "type": "text"
+        },
+        {
+          "key": "likesAfter",
+          "label": "Curtidas finais",
+          "type": "text"
+        }
+      ]
+    },
+    {
+      "id": "tiktok-comments-panel",
+      "app": "tiktok",
+      "name": "Painel de comentários",
+      "category": "Comentários",
+      "description": "Painel deslizante de comentários com compositor, digitação e nova resposta.",
+      "width": 460,
+      "height": 708,
+      "duration": 8,
+      "tags": [
+        "painel",
+        "comentários",
+        "digitar",
+        "responder"
+      ],
+      "defaults": {
+        "count": "248",
+        "username": "marina.tech",
+        "primary": "Explica como você fez essa automação?",
+        "secondUser": "lucas.dev",
+        "secondComment": "Já quero testar no meu trabalho.",
+        "creatorName": "Elizeu Moyses",
+        "reply": "Vou mostrar o passo a passo no próximo vídeo!",
+        "input": "Qual etapa você quer ver primeiro?"
+      },
+      "fields": [
+        {
+          "key": "count",
+          "label": "Total de comentários",
+          "type": "text"
+        },
+        {
+          "key": "username",
+          "label": "Primeiro usuário",
+          "type": "text"
+        },
+        {
+          "key": "primary",
+          "label": "Primeiro comentário",
+          "type": "textarea"
+        },
+        {
+          "key": "secondUser",
+          "label": "Segundo usuário",
+          "type": "text"
+        },
+        {
+          "key": "secondComment",
+          "label": "Segundo comentário",
+          "type": "textarea"
+        },
+        {
+          "key": "creatorName",
+          "label": "Criador",
+          "type": "text"
+        },
+        {
+          "key": "reply",
+          "label": "Resposta publicada",
+          "type": "textarea"
+        },
+        {
+          "key": "input",
+          "label": "Texto digitado",
+          "type": "textarea"
+        }
+      ]
+    },
+    {
+      "id": "tiktok-video",
+      "app": "tiktok",
+      "name": "Interface de vídeo",
+      "category": "Vídeo",
+      "description": "Feed vertical Para você, com ações laterais, legenda, áudio e navegação inferior.",
+      "width": 440,
+      "height": 786,
+      "duration": 8,
+      "tags": [
+        "vídeo",
+        "feed",
+        "para você",
+        "curtir",
+        "salvar"
+      ],
+      "defaults": {
+        "displayName": "Elizeu Moyses",
+        "username": "elizeumoyses",
+        "primary": "A automação começa com uma tarefa que se repete. #tecnologia #automacao",
+        "sound": "som original - Elizeu Moyses",
+        "likes": "12,8 mil",
+        "likesAfter": "12,9 mil",
+        "comments": "248",
+        "saves": "1.024",
+        "shares": "386",
+        "headline": "O que você faria com uma hora a mais por dia?"
+      },
+      "fields": [
+        {
+          "key": "displayName",
+          "label": "Nome do criador",
+          "type": "text"
+        },
+        {
+          "key": "username",
+          "label": "Usuário",
+          "type": "text"
+        },
+        {
+          "key": "primary",
+          "label": "Legenda do vídeo",
+          "type": "textarea"
+        },
+        {
+          "key": "sound",
+          "label": "Crédito de áudio",
+          "type": "text"
+        },
+        {
+          "key": "likes",
+          "label": "Curtidas iniciais",
+          "type": "text"
+        },
+        {
+          "key": "likesAfter",
+          "label": "Curtidas após interação",
+          "type": "text"
+        },
+        {
+          "key": "comments",
+          "label": "Comentários",
+          "type": "text"
+        },
+        {
+          "key": "saves",
+          "label": "Salvamentos",
+          "type": "text"
+        },
+        {
+          "key": "shares",
+          "label": "Compartilhamentos",
+          "type": "text"
+        },
+        {
+          "key": "headline",
+          "label": "Texto sobre o vídeo",
+          "type": "textarea"
+        }
+      ]
+    },
+    {
+      "id": "tiktok-dm",
+      "app": "tiktok",
+      "name": "Mensagem direta",
+      "category": "Mensagens",
+      "description": "Conversa privada ilustrativa, com digitação, envio e mensagem recebida.",
+      "width": 440,
+      "height": 700,
+      "duration": 8,
+      "tags": [
+        "dm",
+        "mensagem",
+        "conversa",
+        "digitar"
+      ],
+      "defaults": {
+        "username": "marina.tech",
+        "primary": "Vi seu vídeo de automação. Por onde começo?",
+        "reply": "Escolha uma tarefa repetitiva. Depois, mapeie cada etapa.",
+        "finalReply": "Vou começar pelo relatório semanal. Valeu!",
+        "sharedTitle": "Uma tarefa a menos. Uma hora a mais.",
+        "time": "Hoje 14:32"
+      },
+      "fields": [
+        {
+          "key": "username",
+          "label": "Contato",
+          "type": "text"
+        },
+        {
+          "key": "primary",
+          "label": "Mensagem recebida",
+          "type": "textarea"
+        },
+        {
+          "key": "reply",
+          "label": "Sua resposta",
+          "type": "textarea"
+        },
+        {
+          "key": "finalReply",
+          "label": "Resposta final",
+          "type": "textarea"
+        },
+        {
+          "key": "sharedTitle",
+          "label": "Título do vídeo compartilhado",
+          "type": "text"
+        },
+        {
+          "key": "time",
+          "label": "Data e hora",
+          "type": "text"
+        }
+      ]
+    },
+    {
+      "id": "tiktok-search",
+      "app": "tiktok",
+      "name": "Busca",
+      "category": "Descoberta",
+      "description": "Termo digitado na pesquisa e resultados em grade, com conta e sugestões.",
+      "width": 460,
+      "height": 680,
+      "duration": 8,
+      "tags": [
+        "busca",
+        "pesquisa",
+        "resultados",
+        "descoberta"
+      ],
+      "defaults": {
+        "query": "automação no trabalho",
+        "primary": "Uma tarefa a menos na sua rotina",
+        "secondTitle": "Comece por esta automação simples",
+        "username": "elizeumoyses",
+        "displayName": "Elizeu Moyses",
+        "followers": "12,8 mil seguidores",
+        "suggestion": "automação para iniciantes",
+        "firstViews": "48,2 mil",
+        "secondViews": "21,6 mil"
+      },
+      "fields": [
+        {
+          "key": "query",
+          "label": "Termo de busca",
+          "type": "text"
+        },
+        {
+          "key": "primary",
+          "label": "Primeiro resultado",
+          "type": "textarea"
+        },
+        {
+          "key": "secondTitle",
+          "label": "Segundo resultado",
+          "type": "textarea"
+        },
+        {
+          "key": "username",
+          "label": "Usuário",
+          "type": "text"
+        },
+        {
+          "key": "displayName",
+          "label": "Nome",
+          "type": "text"
+        },
+        {
+          "key": "followers",
+          "label": "Seguidores",
+          "type": "text"
+        },
+        {
+          "key": "suggestion",
+          "label": "Pesquisa sugerida",
+          "type": "text"
+        },
+        {
+          "key": "firstViews",
+          "label": "Visualizações do primeiro vídeo",
+          "type": "text"
+        },
+        {
+          "key": "secondViews",
+          "label": "Visualizações do segundo vídeo",
+          "type": "text"
+        }
+      ]
+    },
+    {
+      "id": "tiktok-profile-follow",
+      "app": "tiktok",
+      "name": "Perfil e seguir",
+      "category": "Perfil",
+      "description": "Perfil de criador com estatísticas, bio, grade de vídeos e confirmação de seguir.",
+      "width": 440,
+      "height": 740,
+      "duration": 7,
+      "tags": [
+        "perfil",
+        "seguir",
+        "criador",
+        "bio"
+      ],
+      "defaults": {
+        "displayName": "Elizeu Moyses",
+        "username": "elizeumoyses",
+        "primary": "Tecnologia para simplificar o trabalho.\nMenos repetição. Mais tempo para criar.",
+        "following": "186",
+        "followers": "12,8 mil",
+        "likes": "84,2 mil",
+        "link": "automatizasoftware.com.br",
+        "firstTitle": "AUTOMATIZE",
+        "secondTitle": "GANHE TEMPO",
+        "thirdTitle": "COMECE AQUI"
+      },
+      "fields": [
+        {
+          "key": "displayName",
+          "label": "Nome exibido",
+          "type": "text"
+        },
+        {
+          "key": "username",
+          "label": "Usuário",
+          "type": "text"
+        },
+        {
+          "key": "primary",
+          "label": "Bio",
+          "type": "textarea"
+        },
+        {
+          "key": "following",
+          "label": "Seguindo",
+          "type": "text"
+        },
+        {
+          "key": "followers",
+          "label": "Seguidores",
+          "type": "text"
+        },
+        {
+          "key": "likes",
+          "label": "Curtidas",
+          "type": "text"
+        },
+        {
+          "key": "link",
+          "label": "Link exibido",
+          "type": "text"
+        },
+        {
+          "key": "firstTitle",
+          "label": "Primeira miniatura",
+          "type": "text"
+        },
+        {
+          "key": "secondTitle",
+          "label": "Segunda miniatura",
+          "type": "text"
+        },
+        {
+          "key": "thirdTitle",
+          "label": "Terceira miniatura",
+          "type": "text"
+        }
+      ]
+    },
+    {
+      "id": "tiktok-video-reply",
+      "app": "tiktok",
+      "name": "Resposta a comentário em vídeo",
+      "category": "Vídeo",
+      "description": "Sticker de comentário sobre o vídeo de resposta, com balão, avatar e legenda.",
+      "width": 460,
+      "height": 760,
+      "duration": 8,
+      "tags": [
+        "resposta em vídeo",
+        "sticker",
+        "comentário",
+        "overlay"
+      ],
+      "defaults": {
+        "displayName": "Elizeu Moyses",
+        "username": "elizeumoyses",
+        "primary": "Respondendo a @marina.tech: vamos por partes. #automacao",
+        "sound": "som original - Elizeu Moyses",
+        "likes": "12,8 mil",
+        "likesAfter": "12,9 mil",
+        "comments": "248",
+        "saves": "1.024",
+        "shares": "386",
+        "commenter": "marina.tech",
+        "comment": "Você pode mostrar isso na prática?",
+        "answer": "Primeiro, escolha uma tarefa que você repete toda semana."
+      },
+      "fields": [
+        {
+          "key": "commenter",
+          "label": "Autor do comentário",
+          "type": "text"
+        },
+        {
+          "key": "comment",
+          "label": "Comentário no sticker",
+          "type": "textarea"
+        },
+        {
+          "key": "answer",
+          "label": "Legenda da resposta",
+          "type": "textarea"
+        },
+        {
+          "key": "displayName",
+          "label": "Nome do criador",
+          "type": "text"
+        },
+        {
+          "key": "username",
+          "label": "Usuário",
+          "type": "text"
+        },
+        {
+          "key": "primary",
+          "label": "Legenda do vídeo",
+          "type": "textarea"
+        },
+        {
+          "key": "sound",
+          "label": "Crédito de áudio",
+          "type": "text"
+        },
+        {
+          "key": "likes",
+          "label": "Curtidas iniciais",
+          "type": "text"
+        },
+        {
+          "key": "likesAfter",
+          "label": "Curtidas após interação",
+          "type": "text"
+        },
+        {
+          "key": "comments",
+          "label": "Comentários",
+          "type": "text"
+        },
+        {
+          "key": "saves",
+          "label": "Salvamentos",
+          "type": "text"
+        },
+        {
+          "key": "shares",
+          "label": "Compartilhamentos",
+          "type": "text"
+        }
+      ]
+    },
+    {
+      "id": "claude-composer",
+      "app": "claude",
+      "name": "Composer",
+      "description": "Uma ideia é digitada no composer e enviada para a conversa.",
+      "category": "Conversa",
+      "width": 540,
+      "height": 350,
+      "duration": 8,
+      "tags": [
+        "prompt",
+        "mensagem",
+        "digitar",
+        "enviar"
+      ],
+      "defaults": {
+        "title": "O que vamos criar hoje?",
+        "primary": "Transforme esta ideia em um roteiro simples e direto.",
+        "placeholder": "Como posso ajudar você?",
+        "model": "Sonnet"
+      },
+      "fields": [
+        {
+          "key": "title",
+          "label": "Título",
+          "type": "text"
+        },
+        {
+          "key": "primary",
+          "label": "Mensagem",
+          "type": "textarea"
+        },
+        {
+          "key": "placeholder",
+          "label": "Texto do composer",
+          "type": "text"
+        },
+        {
+          "key": "model",
+          "label": "Rótulo do modelo",
+          "type": "text"
+        }
+      ]
+    },
+    {
+      "id": "claude-conversation",
+      "app": "claude",
+      "name": "Conversa e resposta digitada",
+      "description": "Pergunta em balão neutro e resposta serifada com ações de mensagem.",
+      "category": "Conversa",
+      "width": 540,
+      "height": 510,
+      "duration": 9,
+      "tags": [
+        "resposta",
+        "chat",
+        "texto",
+        "digitar"
+      ],
+      "defaults": {
+        "title": "Uma ideia, bem explicada",
+        "primary": "Como a IA pode ajudar no meu trabalho?",
+        "response": "Comece por uma tarefa que você repete toda semana.\n\nA IA pode organizar as informações, preparar um primeiro rascunho e ajudar na revisão. Você decide o que faz sentido usar.",
+        "placeholder": "Responder ao Claude…"
+      },
+      "fields": [
+        {
+          "key": "title",
+          "label": "Título da conversa",
+          "type": "text"
+        },
+        {
+          "key": "primary",
+          "label": "Pergunta",
+          "type": "textarea"
+        },
+        {
+          "key": "response",
+          "label": "Resposta",
+          "type": "textarea"
+        },
+        {
+          "key": "placeholder",
+          "label": "Texto do composer",
+          "type": "text"
+        }
+      ]
+    },
+    {
+      "id": "claude-thinking",
+      "app": "claude",
+      "name": "Pensando",
+      "description": "Indicador de pensamento com tempo, resumo visual e resposta final.",
+      "category": "Raciocínio",
+      "width": 540,
+      "height": 405,
+      "duration": 8,
+      "tags": [
+        "pensando",
+        "processando",
+        "raciocínio",
+        "carregando"
+      ],
+      "defaults": {
+        "primary": "Organize os próximos passos deste projeto.",
+        "step1": "Lendo o contexto",
+        "step2": "Organizando as informações",
+        "step3": "Preparando a resposta",
+        "response": "Podemos dividir o trabalho em três etapas: entender, priorizar e executar."
+      },
+      "fields": [
+        {
+          "key": "primary",
+          "label": "Pergunta",
+          "type": "textarea"
+        },
+        {
+          "key": "step1",
+          "label": "Primeiro status",
+          "type": "text"
+        },
+        {
+          "key": "step2",
+          "label": "Segundo status",
+          "type": "text"
+        },
+        {
+          "key": "step3",
+          "label": "Terceiro status",
+          "type": "text"
+        },
+        {
+          "key": "response",
+          "label": "Resposta",
+          "type": "textarea"
+        }
+      ]
+    },
+    {
+      "id": "claude-code",
+      "app": "claude",
+      "name": "Bloco de código",
+      "description": "Código digitado em painel com linguagem, copiar e confirmação.",
+      "category": "Criação",
+      "width": 540,
+      "height": 460,
+      "duration": 9,
+      "tags": [
+        "código",
+        "programação",
+        "copiar",
+        "snippet"
+      ],
+      "defaults": {
+        "primary": "Crie uma função para organizar minhas tarefas.",
+        "intro": "Aqui está um exemplo simples que você pode adaptar:",
+        "language": "JavaScript",
+        "code": "const tarefas = [\n  { nome: 'Planejar', prioridade: 1 },\n  { nome: 'Revisar', prioridade: 2 }\n];\n\nfunction organizar(lista) {\n  return [...lista].sort(\n    (a, b) => a.prioridade - b.prioridade\n  );\n}",
+        "footer": "Ajuste os critérios para o seu processo."
+      },
+      "fields": [
+        {
+          "key": "primary",
+          "label": "Pedido",
+          "type": "textarea"
+        },
+        {
+          "key": "intro",
+          "label": "Introdução",
+          "type": "textarea"
+        },
+        {
+          "key": "language",
+          "label": "Linguagem",
+          "type": "text"
+        },
+        {
+          "key": "code",
+          "label": "Código",
+          "type": "textarea"
+        },
+        {
+          "key": "footer",
+          "label": "Texto após o código",
+          "type": "text"
+        }
+      ]
+    },
+    {
+      "id": "claude-artifact",
+      "app": "claude",
+      "name": "Artifact",
+      "description": "Conversa e painel de criação com uma prévia de documento.",
+      "category": "Criação",
+      "width": 560,
+      "height": 585,
+      "duration": 10,
+      "tags": [
+        "artifact",
+        "documento",
+        "prévia",
+        "gerar",
+        "painel"
+      ],
+      "defaults": {
+        "primary": "Crie um guia visual para tirar uma ideia do papel.",
+        "response": "Vou organizar isso em um guia que você pode editar.",
+        "title": "Da ideia à ação",
+        "subtitle": "Um caminho simples para começar.",
+        "step1": "Defina o objetivo",
+        "step2": "Escolha o primeiro passo",
+        "step3": "Revise e avance",
+        "filename": "Guia de processo"
+      },
+      "fields": [
+        {
+          "key": "primary",
+          "label": "Pedido",
+          "type": "textarea"
+        },
+        {
+          "key": "response",
+          "label": "Resposta",
+          "type": "textarea"
+        },
+        {
+          "key": "title",
+          "label": "Título do artifact",
+          "type": "text"
+        },
+        {
+          "key": "subtitle",
+          "label": "Subtítulo",
+          "type": "text"
+        },
+        {
+          "key": "step1",
+          "label": "Primeiro passo",
+          "type": "text"
+        },
+        {
+          "key": "step2",
+          "label": "Segundo passo",
+          "type": "text"
+        },
+        {
+          "key": "step3",
+          "label": "Terceiro passo",
+          "type": "text"
+        },
+        {
+          "key": "filename",
+          "label": "Nome do painel",
+          "type": "text"
+        }
+      ]
+    },
+    {
+      "id": "claude-upload",
+      "app": "claude",
+      "name": "Arquivo e upload",
+      "description": "Arquivo anexado com progresso, confirmação e uma pergunta contextual.",
+      "category": "Contexto",
+      "width": 540,
+      "height": 400,
+      "duration": 8,
+      "tags": [
+        "arquivo",
+        "upload",
+        "pdf",
+        "anexo",
+        "contexto"
+      ],
+      "defaults": {
+        "title": "Dê contexto à conversa",
+        "filename": "briefing-do-projeto.pdf",
+        "filemeta": "PDF · 240 KB",
+        "primary": "Resuma este documento e destaque os próximos passos.",
+        "model": "Sonnet",
+        "uploaded": "Pronto para usar"
+      },
+      "fields": [
+        {
+          "key": "title",
+          "label": "Título",
+          "type": "text"
+        },
+        {
+          "key": "filename",
+          "label": "Nome do arquivo",
+          "type": "text"
+        },
+        {
+          "key": "filemeta",
+          "label": "Tipo e tamanho",
+          "type": "text"
+        },
+        {
+          "key": "primary",
+          "label": "Mensagem",
+          "type": "textarea"
+        },
+        {
+          "key": "model",
+          "label": "Rótulo do modelo",
+          "type": "text"
+        },
+        {
+          "key": "uploaded",
+          "label": "Status após o upload",
+          "type": "text"
+        }
+      ]
+    },
+    {
+      "id": "claude-project",
+      "app": "claude",
+      "name": "Projeto e contexto",
+      "description": "Projeto com instruções, conhecimento e composer com contexto.",
+      "category": "Contexto",
+      "width": 540,
+      "height": 570,
+      "duration": 9,
+      "tags": [
+        "projeto",
+        "instruções",
+        "conhecimento",
+        "arquivos"
+      ],
+      "defaults": {
+        "title": "Meu próximo projeto",
+        "description": "Ideias, referências e decisões no mesmo lugar.",
+        "instructions": "Use uma linguagem clara. Priorize exemplos práticos e próximos passos.",
+        "file1": "referencias-do-projeto.pdf",
+        "file2": "notas-e-decisoes.txt",
+        "primary": "Vamos organizar o primeiro passo?",
+        "model": "Sonnet",
+        "context": "Contexto do projeto"
+      },
+      "fields": [
+        {
+          "key": "title",
+          "label": "Nome do projeto",
+          "type": "text"
+        },
+        {
+          "key": "description",
+          "label": "Descrição",
+          "type": "textarea"
+        },
+        {
+          "key": "instructions",
+          "label": "Instruções",
+          "type": "textarea"
+        },
+        {
+          "key": "file1",
+          "label": "Primeiro arquivo",
+          "type": "text"
+        },
+        {
+          "key": "file2",
+          "label": "Segundo arquivo",
+          "type": "text"
+        },
+        {
+          "key": "primary",
+          "label": "Mensagem",
+          "type": "textarea"
+        },
+        {
+          "key": "model",
+          "label": "Rótulo do modelo",
+          "type": "text"
+        },
+        {
+          "key": "context",
+          "label": "Etiqueta de contexto",
+          "type": "text"
+        }
+      ]
+    },
+    {
+      "id": "claude-model-tools",
+      "app": "claude",
+      "name": "Seleção de modelo e ferramentas",
+      "description": "Menu de ferramentas seguido do seletor de modelo e esforço.",
+      "category": "Ferramentas",
+      "width": 540,
+      "height": 555,
+      "duration": 8,
+      "tags": [
+        "modelo",
+        "ferramentas",
+        "pesquisa",
+        "pensamento",
+        "menu"
+      ],
+      "defaults": {
+        "title": "Como posso ajudar?",
+        "primary": "Pesquise e organize as informações deste projeto.",
+        "model": "Sonnet",
+        "model2": "Opus",
+        "model3": "Haiku",
+        "effort": "Alto",
+        "tool": "Buscar na web"
+      },
+      "fields": [
+        {
+          "key": "title",
+          "label": "Título",
+          "type": "text"
+        },
+        {
+          "key": "primary",
+          "label": "Mensagem",
+          "type": "textarea"
+        },
+        {
+          "key": "model",
+          "label": "Modelo selecionado",
+          "type": "text"
+        },
+        {
+          "key": "model2",
+          "label": "Segundo modelo",
+          "type": "text"
+        },
+        {
+          "key": "model3",
+          "label": "Terceiro modelo",
+          "type": "text"
+        },
+        {
+          "key": "effort",
+          "label": "Nível de esforço",
+          "type": "text"
+        },
+        {
+          "key": "tool",
+          "label": "Ferramenta selecionada",
+          "type": "text"
+        }
+      ]
+    },
+    {
+      "id": "chatgpt-composer",
+      "app": "chatgpt",
+      "name": "Composer",
+      "description": "Prompt digitado no composer e enviado para a conversa.",
+      "category": "Conversa",
+      "width": 560,
+      "height": 350,
+      "duration": 8,
+      "tags": [
+        "prompt",
+        "digitação",
+        "composer",
+        "enviar"
+      ],
+      "defaults": {
+        "title": "Como posso ajudar?",
+        "primary": "Me ajude a automatizar uma tarefa.",
+        "placeholder": "Pergunte alguma coisa",
+        "model": "Automático"
+      },
+      "fields": [
+        {
+          "key": "title",
+          "label": "Título",
+          "type": "text"
+        },
+        {
+          "key": "primary",
+          "label": "Prompt",
+          "type": "textarea"
+        },
+        {
+          "key": "placeholder",
+          "label": "Placeholder",
+          "type": "text"
+        },
+        {
+          "key": "model",
+          "label": "Rótulo do modo",
+          "type": "text"
+        }
+      ]
+    },
+    {
+      "id": "chatgpt-conversation",
+      "app": "chatgpt",
+      "name": "Conversa e resposta digitada",
+      "description": "Pergunta em balão e resposta em fluxo, com ações ao concluir.",
+      "category": "Conversa",
+      "width": 560,
+      "height": 570,
+      "duration": 9,
+      "tags": [
+        "chat",
+        "resposta",
+        "digitação",
+        "conversa"
+      ],
+      "defaults": {
+        "primary": "Por onde começo a automatizar meu trabalho?",
+        "secondary": "Comece por uma tarefa pequena e repetitiva.\n\n1. Descreva as etapas que você repete.\n2. Separe as entradas e o resultado esperado.\n3. Teste a automação com um exemplo real.\n\nDepois, ajuste o que ainda precisa de você.",
+        "placeholder": "Pergunte alguma coisa"
+      },
+      "fields": [
+        {
+          "key": "primary",
+          "label": "Pergunta",
+          "type": "textarea"
+        },
+        {
+          "key": "secondary",
+          "label": "Resposta",
+          "type": "textarea"
+        },
+        {
+          "key": "placeholder",
+          "label": "Placeholder",
+          "type": "text"
+        }
+      ]
+    },
+    {
+      "id": "chatgpt-thinking",
+      "app": "chatgpt",
+      "name": "Pensando",
+      "description": "Indicador de trabalho com etapas breves e resposta ao final.",
+      "category": "Geração",
+      "width": 560,
+      "height": 560,
+      "duration": 8.5,
+      "tags": [
+        "pensando",
+        "raciocínio",
+        "progresso",
+        "gerando"
+      ],
+      "defaults": {
+        "primary": "Compare as opções antes de sugerir um caminho.",
+        "status": "Pensando",
+        "step1": "Organizando as informações",
+        "step2": "Comparando as opções",
+        "step3": "Preparando a resposta",
+        "secondary": "O melhor primeiro passo é testar uma opção em pequena escala, medir o resultado e só então ampliar."
+      },
+      "fields": [
+        {
+          "key": "primary",
+          "label": "Pergunta",
+          "type": "textarea"
+        },
+        {
+          "key": "status",
+          "label": "Status inicial",
+          "type": "text"
+        },
+        {
+          "key": "step1",
+          "label": "Etapa 1",
+          "type": "text"
+        },
+        {
+          "key": "step2",
+          "label": "Etapa 2",
+          "type": "text"
+        },
+        {
+          "key": "step3",
+          "label": "Etapa 3",
+          "type": "text"
+        },
+        {
+          "key": "secondary",
+          "label": "Resposta",
+          "type": "textarea"
+        }
+      ]
+    },
+    {
+      "id": "chatgpt-code",
+      "app": "chatgpt",
+      "name": "Bloco de código",
+      "description": "Código digitado com realce de sintaxe e estado de cópia.",
+      "category": "Criação",
+      "width": 560,
+      "height": 660,
+      "duration": 9,
+      "tags": [
+        "código",
+        "programação",
+        "copiar",
+        "javascript"
+      ],
+      "defaults": {
+        "primary": "Crie uma função simples para somar os valores.",
+        "intro": "Você pode começar com esta função:",
+        "language": "javascript",
+        "code": "const valores = [12, 18, 25];\n\nfunction somar(lista) {\n  return lista.reduce(\n    (total, valor) => total + valor, 0\n  );\n}\n\nconsole.log(somar(valores)); // 55",
+        "secondary": "A função percorre a lista e devolve o total."
+      },
+      "fields": [
+        {
+          "key": "primary",
+          "label": "Pergunta",
+          "type": "textarea"
+        },
+        {
+          "key": "intro",
+          "label": "Introdução",
+          "type": "text"
+        },
+        {
+          "key": "language",
+          "label": "Linguagem",
+          "type": "text"
+        },
+        {
+          "key": "code",
+          "label": "Código",
+          "type": "textarea"
+        },
+        {
+          "key": "secondary",
+          "label": "Explicação",
+          "type": "textarea"
+        }
+      ]
+    },
+    {
+      "id": "chatgpt-search",
+      "app": "chatgpt",
+      "name": "Busca e fontes",
+      "description": "Atividade de busca, resposta com citações e painel de fontes.",
+      "category": "Ferramentas",
+      "width": 560,
+      "height": 610,
+      "duration": 9,
+      "tags": [
+        "busca",
+        "pesquisa",
+        "fontes",
+        "citações",
+        "web"
+      ],
+      "defaults": {
+        "primary": "Como pesquisar com fontes no ChatGPT?",
+        "secondary": "Peça uma comparação e confira as fontes citadas. A busca reúne referências para você revisar antes de decidir.",
+        "source1": "Documentação oficial do ChatGPT",
+        "domain1": "learn.chatgpt.com",
+        "source2": "Como usar a busca na web",
+        "domain2": "openai.com"
+      },
+      "fields": [
+        {
+          "key": "primary",
+          "label": "Pergunta",
+          "type": "textarea"
+        },
+        {
+          "key": "secondary",
+          "label": "Resposta",
+          "type": "textarea"
+        },
+        {
+          "key": "source1",
+          "label": "Título da fonte 1",
+          "type": "text"
+        },
+        {
+          "key": "domain1",
+          "label": "Domínio da fonte 1",
+          "type": "text"
+        },
+        {
+          "key": "source2",
+          "label": "Título da fonte 2",
+          "type": "text"
+        },
+        {
+          "key": "domain2",
+          "label": "Domínio da fonte 2",
+          "type": "text"
+        }
+      ]
+    },
+    {
+      "id": "chatgpt-upload",
+      "app": "chatgpt",
+      "name": "Upload e arquivo",
+      "description": "Anexo no composer, progresso de preparo e prompt digitado.",
+      "category": "Ferramentas",
+      "width": 560,
+      "height": 430,
+      "duration": 8,
+      "tags": [
+        "upload",
+        "arquivo",
+        "anexo",
+        "pdf",
+        "contexto"
+      ],
+      "defaults": {
+        "title": "Adicione contexto à conversa",
+        "primary": "Resuma esse arquivo em três pontos.",
+        "filename": "planejamento.pdf",
+        "filemeta": "PDF · 2 páginas",
+        "model": "Automático"
+      },
+      "fields": [
+        {
+          "key": "title",
+          "label": "Título",
+          "type": "text"
+        },
+        {
+          "key": "primary",
+          "label": "Prompt",
+          "type": "textarea"
+        },
+        {
+          "key": "filename",
+          "label": "Nome do arquivo",
+          "type": "text"
+        },
+        {
+          "key": "filemeta",
+          "label": "Descrição do arquivo",
+          "type": "text"
+        },
+        {
+          "key": "model",
+          "label": "Rótulo do modo",
+          "type": "text"
+        }
+      ]
+    },
+    {
+      "id": "chatgpt-voice",
+      "app": "chatgpt",
+      "name": "Conversa por voz",
+      "description": "Voz integrada ao chat, transcrição e controles visuais de áudio.",
+      "category": "Ferramentas",
+      "width": 560,
+      "height": 560,
+      "duration": 8,
+      "tags": [
+        "voz",
+        "áudio",
+        "microfone",
+        "live",
+        "transcrição"
+      ],
+      "defaults": {
+        "primary": "Me ajude a organizar essa ideia.",
+        "secondary": "Claro. Me conte o objetivo e o que você já tem em mente. A partir daí, organizamos os próximos passos.",
+        "listening": "Ouvindo",
+        "speaking": "Respondendo"
+      },
+      "fields": [
+        {
+          "key": "primary",
+          "label": "Fala do usuário",
+          "type": "textarea"
+        },
+        {
+          "key": "secondary",
+          "label": "Resposta",
+          "type": "textarea"
+        },
+        {
+          "key": "listening",
+          "label": "Status ouvindo",
+          "type": "text"
+        },
+        {
+          "key": "speaking",
+          "label": "Status respondendo",
+          "type": "text"
+        }
+      ]
+    },
+    {
+      "id": "chatgpt-tools",
+      "app": "chatgpt",
+      "name": "Ferramentas e modo de resposta",
+      "description": "Abertura do menu de ferramentas e seleção de um modo genérico.",
+      "category": "Ferramentas",
+      "width": 560,
+      "height": 575,
+      "duration": 8.5,
+      "tags": [
+        "menu",
+        "modelo",
+        "ferramentas",
+        "raciocínio",
+        "seleção"
+      ],
+      "defaults": {
+        "title": "O que vamos fazer hoje?",
+        "primary": "Escolha como trabalhar nesta conversa.",
+        "tool1": "Pesquisar na web",
+        "tool2": "Criar imagem",
+        "tool3": "Pesquisa aprofundada",
+        "model": "Automático",
+        "selected": "Raciocínio"
+      },
+      "fields": [
+        {
+          "key": "title",
+          "label": "Título",
+          "type": "text"
+        },
+        {
+          "key": "primary",
+          "label": "Texto do composer",
+          "type": "textarea"
+        },
+        {
+          "key": "tool1",
+          "label": "Ferramenta 1",
+          "type": "text"
+        },
+        {
+          "key": "tool2",
+          "label": "Ferramenta 2",
+          "type": "text"
+        },
+        {
+          "key": "tool3",
+          "label": "Ferramenta 3",
+          "type": "text"
+        },
+        {
+          "key": "model",
+          "label": "Modo inicial",
+          "type": "text"
+        },
+        {
+          "key": "selected",
+          "label": "Modo selecionado",
+          "type": "text"
+        }
+      ]
+    },
+    {
+      "id": "whatsapp-chat",
+      "app": "whatsapp",
+      "name": "Conversa",
+      "category": "Conversas",
+      "description": "Contato digitando, mensagens chegando, resposta digitada e tiques que ficam azuis.",
+      "width": 430,
+      "height": 620,
+      "duration": 9,
+      "tags": [
+        "conversa",
+        "mensagem",
+        "digitar",
+        "lida",
+        "tiques"
+      ],
+      "defaults": {
+        "displayName": "Mariana",
+        "status": "online",
+        "primary": "Oi! Vi seu vídeo das telas animadas 😮",
+        "secondary": "Consegue me mandar o pacote?",
+        "tertiary": "Claro! Já te mando o link 👇",
+        "timeIn": "09:41",
+        "timeOut": "09:42"
+      },
+      "fields": [
+        {
+          "key": "displayName",
+          "label": "Nome do contato",
+          "type": "text"
+        },
+        {
+          "key": "status",
+          "label": "Status",
+          "type": "text"
+        },
+        {
+          "key": "primary",
+          "label": "Mensagem recebida 1",
+          "type": "textarea"
+        },
+        {
+          "key": "secondary",
+          "label": "Mensagem recebida 2",
+          "type": "textarea"
+        },
+        {
+          "key": "tertiary",
+          "label": "Sua resposta",
+          "type": "textarea"
+        },
+        {
+          "key": "timeIn",
+          "label": "Horário recebido",
+          "type": "text"
+        },
+        {
+          "key": "timeOut",
+          "label": "Horário enviado",
+          "type": "text"
+        }
+      ]
+    },
+    {
+      "id": "whatsapp-notification",
+      "app": "whatsapp",
+      "name": "Notificação",
+      "category": "Notificações",
+      "description": "Notificação no topo da tela que empilha mensagens e abre as ações de resposta.",
+      "width": 520,
+      "height": 260,
+      "duration": 7,
+      "tags": [
+        "notificação",
+        "push",
+        "mensagem",
+        "aviso"
+      ],
+      "defaults": {
+        "displayName": "Mariana",
+        "primary": "Vi seu vídeo! Como faço pra ter as telas?",
+        "secondary": "Comentei APPS lá no post 🙌",
+        "age": "agora"
+      },
+      "fields": [
+        {
+          "key": "displayName",
+          "label": "Nome do contato",
+          "type": "text"
+        },
+        {
+          "key": "primary",
+          "label": "Primeira mensagem",
+          "type": "textarea"
+        },
+        {
+          "key": "secondary",
+          "label": "Segunda mensagem",
+          "type": "textarea"
+        },
+        {
+          "key": "age",
+          "label": "Tempo",
+          "type": "text"
+        }
+      ]
+    },
+    {
+      "id": "whatsapp-audio",
+      "app": "whatsapp",
+      "name": "Mensagem de voz",
+      "category": "Áudio",
+      "description": "Áudio recebido tocando com velocidade 1,5× e uma resposta em texto no fim.",
+      "width": 460,
+      "height": 360,
+      "duration": 8,
+      "tags": [
+        "áudio",
+        "voz",
+        "mensagem",
+        "ouvir"
+      ],
+      "defaults": {
+        "displayName": "Mariana",
+        "duration": "0:18",
+        "primary": "Ouvi! Vou testar hoje no meu Reels 🙌",
+        "timeIn": "09:41",
+        "timeOut": "09:43"
+      },
+      "fields": [
+        {
+          "key": "displayName",
+          "label": "Nome do contato",
+          "type": "text"
+        },
+        {
+          "key": "duration",
+          "label": "Duração do áudio",
+          "type": "text"
+        },
+        {
+          "key": "primary",
+          "label": "Sua resposta",
+          "type": "textarea"
+        },
+        {
+          "key": "timeIn",
+          "label": "Horário do áudio",
+          "type": "text"
+        },
+        {
+          "key": "timeOut",
+          "label": "Horário da resposta",
+          "type": "text"
+        }
+      ]
+    },
+    {
+      "id": "whatsapp-group",
+      "app": "whatsapp",
+      "name": "Grupo",
+      "category": "Conversas",
+      "description": "Grupo com nomes coloridos, reação em emoji e participante digitando.",
+      "width": 430,
+      "height": 640,
+      "duration": 9,
+      "tags": [
+        "grupo",
+        "reação",
+        "emoji",
+        "equipe"
+      ],
+      "defaults": {
+        "groupName": "Criadores de conteúdo",
+        "members": "Ana, Pedro, Bia, você",
+        "userA": "Ana",
+        "commentA": "Alguém tem telas de app pra colocar no vídeo?",
+        "primary": "Tenho um pacote grátis, mandei o link 👇",
+        "userB": "Pedro",
+        "commentB": "Testei aqui, ficou muito profissional!",
+        "userC": "Bia",
+        "commentC": "Já salvei. Obrigada! 🙏",
+        "reaction": "🔥"
+      },
+      "fields": [
+        {
+          "key": "groupName",
+          "label": "Nome do grupo",
+          "type": "text"
+        },
+        {
+          "key": "members",
+          "label": "Participantes",
+          "type": "text"
+        },
+        {
+          "key": "userA",
+          "label": "Participante 1",
+          "type": "text"
+        },
+        {
+          "key": "commentA",
+          "label": "Mensagem 1",
+          "type": "textarea"
+        },
+        {
+          "key": "primary",
+          "label": "Sua mensagem",
+          "type": "textarea"
+        },
+        {
+          "key": "userB",
+          "label": "Participante 2",
+          "type": "text"
+        },
+        {
+          "key": "commentB",
+          "label": "Mensagem 2",
+          "type": "textarea"
+        },
+        {
+          "key": "userC",
+          "label": "Participante 3",
+          "type": "text"
+        },
+        {
+          "key": "commentC",
+          "label": "Mensagem 3",
+          "type": "textarea"
+        },
+        {
+          "key": "reaction",
+          "label": "Reação",
+          "type": "text"
+        }
+      ]
+    },
+    {
+      "id": "whatsapp-chat-list",
+      "app": "whatsapp",
+      "name": "Lista de conversas",
+      "category": "Conversas",
+      "description": "Tela inicial: uma conversa nova sobe para o topo com o contador de não lidas.",
+      "width": 430,
+      "height": 720,
+      "duration": 8,
+      "tags": [
+        "lista",
+        "conversas",
+        "não lidas",
+        "início"
+      ],
+      "defaults": {
+        "displayName": "Mariana",
+        "primary": "Me manda o pacote de telas? 🙏",
+        "secondary": "Outra mensagem: chegou aqui! 😍",
+        "chatA": "Equipe Projetos",
+        "chatB": "Pedro",
+        "chatC": "Mãe"
+      },
+      "fields": [
+        {
+          "key": "displayName",
+          "label": "Contato que chama",
+          "type": "text"
+        },
+        {
+          "key": "primary",
+          "label": "Primeira mensagem",
+          "type": "textarea"
+        },
+        {
+          "key": "secondary",
+          "label": "Segunda mensagem",
+          "type": "textarea"
+        },
+        {
+          "key": "chatA",
+          "label": "Conversa 1",
+          "type": "text"
+        },
+        {
+          "key": "chatB",
+          "label": "Conversa 2",
+          "type": "text"
+        },
+        {
+          "key": "chatC",
+          "label": "Conversa 3",
+          "type": "text"
+        }
+      ]
+    },
+    {
+      "id": "whatsapp-business",
+      "app": "whatsapp",
+      "name": "Resposta automática com botões",
+      "category": "Automação",
+      "description": "Conta comercial responde sozinha com botões; o cliente toca e recebe o link.",
+      "width": 430,
+      "height": 720,
+      "duration": 9,
+      "tags": [
+        "business",
+        "automação",
+        "botões",
+        "link",
+        "atendimento"
+      ],
+      "defaults": {
+        "businessName": "Automatiza Software",
+        "status": "Conta comercial",
+        "primary": "APPS",
+        "secondary": "Oi! 👋 Que bom que você chegou. Quer receber o pacote de telas animadas?",
+        "buttonA": "Quero o pacote",
+        "buttonB": "Falar com uma pessoa",
+        "tertiary": "Aqui está 👇 É só baixar e usar no seu vídeo.",
+        "link": "github.com/seu-usuario/pacote"
+      },
+      "fields": [
+        {
+          "key": "businessName",
+          "label": "Nome da empresa",
+          "type": "text"
+        },
+        {
+          "key": "status",
+          "label": "Status",
+          "type": "text"
+        },
+        {
+          "key": "primary",
+          "label": "Mensagem do cliente",
+          "type": "text"
+        },
+        {
+          "key": "secondary",
+          "label": "Resposta automática",
+          "type": "textarea"
+        },
+        {
+          "key": "buttonA",
+          "label": "Botão 1",
+          "type": "text"
+        },
+        {
+          "key": "buttonB",
+          "label": "Botão 2",
+          "type": "text"
+        },
+        {
+          "key": "tertiary",
+          "label": "Mensagem final",
+          "type": "textarea"
+        },
+        {
+          "key": "link",
+          "label": "Link exibido",
+          "type": "text"
+        }
+      ]
+    },
+    {
+      "id": "whatsapp-document",
+      "app": "whatsapp",
+      "name": "Arquivo enviado",
+      "category": "Arquivos",
+      "description": "Arquivo sendo enviado com progresso, tiques azuis e o contato confirmando.",
+      "width": 460,
+      "height": 380,
+      "duration": 7,
+      "tags": [
+        "arquivo",
+        "documento",
+        "zip",
+        "pdf",
+        "enviar"
+      ],
+      "defaults": {
+        "fileName": "pacote-telas-animadas.zip",
+        "fileMeta": "ZIP · 2,5 MB",
+        "caption": "As 40 telas, claro e escuro 👇",
+        "primary": "Chegou! Obrigada 🙏",
+        "timeOut": "09:44",
+        "timeIn": "09:45"
+      },
+      "fields": [
+        {
+          "key": "fileName",
+          "label": "Nome do arquivo",
+          "type": "text"
+        },
+        {
+          "key": "fileMeta",
+          "label": "Tipo e tamanho",
+          "type": "text"
+        },
+        {
+          "key": "caption",
+          "label": "Legenda",
+          "type": "textarea"
+        },
+        {
+          "key": "primary",
+          "label": "Resposta do contato",
+          "type": "textarea"
+        },
+        {
+          "key": "timeOut",
+          "label": "Horário do envio",
+          "type": "text"
+        },
+        {
+          "key": "timeIn",
+          "label": "Horário da resposta",
+          "type": "text"
+        }
+      ]
+    },
+    {
+      "id": "whatsapp-call",
+      "app": "whatsapp",
+      "name": "Chamada recebida",
+      "category": "Chamadas",
+      "description": "Chamada de voz chegando, atendida no toque e cronômetro correndo.",
+      "width": 430,
+      "height": 760,
+      "duration": 8,
+      "tags": [
+        "chamada",
+        "ligação",
+        "voz",
+        "atender"
+      ],
+      "defaults": {
+        "displayName": "Mariana",
+        "status": "Chamada de voz do WhatsApp"
+      },
+      "fields": [
+        {
+          "key": "displayName",
+          "label": "Nome do contato",
+          "type": "text"
+        },
+        {
+          "key": "status",
+          "label": "Texto da chamada",
+          "type": "text"
+        }
+      ]
+    }
+  ]
+}
